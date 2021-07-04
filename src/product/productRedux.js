@@ -59,25 +59,11 @@ export const setter2 = handleActions(
 
 export const store = createStore(setter2);
 
-const Some = () => {
-    return (
-        <div>
-
-        </div>
-    )
-}
-
 export const ReduxProvider = () => {
     return (
+        <Provider store={store}>
             <Container/>
-    )
-}
-
-export const ReduxProvider2 = () => {
-    return (
-        <div>
-            ..
-        </div>
+        </Provider>
     )
 }
 

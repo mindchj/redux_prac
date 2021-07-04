@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import ReduxProvider, {store} from './product/productRedux';
+import Container, {store} from './product/productRedux';
+import {Provider} from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReduxProvider store={store} />
+    {/* <ReduxProvider store={store} /> */}
+    <Provider store={store}>
+      <Container/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
